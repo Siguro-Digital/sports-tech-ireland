@@ -1,0 +1,105 @@
+{{#extend "default"}}
+{{#content "body"}}
+
+
+{{> blocks/hero
+heading="Course Finder"
+subheading="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, oditlaborum quasi nesciunt"
+image="/assets/img/man.jpeg"
+line="heading-line"
+box-line="true"
+}}
+
+<section class="w-full bg-offset py-20">
+	<div class="container space-y-14">
+
+		{{> blocks/heading }}
+
+		<main class="flex flex-col md:flex-row items-start w-full space-y-10 md:space-y-0 md:space-x-10">
+			<aside class="w-full max-w-sm space-y-4">
+				<input type="text" class="w-full border border-gray-600 text-lg p-3 px-4" placeholder="Search">
+
+				{{#times 5 }}
+
+				<div class="bg-gray-300" x-data="{ open: false }">
+					<div class="flex justify-between p-6 py-4 cursor-pointer" @click="open = !open">
+						<div class="text-lg font-medium text-gray-600">Course Type</div>
+						<svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="3.5"
+							viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+						</svg>
+					</div>
+					<ul class="bg-white divide-y divide-gray-100" x-cloak x-show="open">
+						{{#times 7 }}
+						<li class="">
+							<label for="checkbox" class="flex w-full items-center space-x-2 p-4 cursor-pointer">
+								<input type="checkbox" id="checkbox" class="w-5 h-5 border border-gray-600">
+								<span class="text-lg text-gray-700">Checkbox</span>
+							</label>
+						</li>
+						{{/times }}
+					</ul>
+				</div>
+				{{/times }}
+
+			</aside>
+
+			<div class="flex-1 space-y-10">
+				<div class="bg-white divide-y divide-gray-400 p-6 sm:p-10 space-y-10">
+					{{#times 5 }}
+					<a href="" class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-8 pt-10 first:pt-0">
+						<div>
+							<img class="w-20 h-20 rounded-full object-cover"
+								src="https://yt3.googleusercontent.com/fo_5GYLniCo0LWwipypmMnHp0I1_r9KMDFC3cwdPF9EsUXUEWlmCsvfALaNLpirGdJplrCpN=s900-c-k-c0x00ffffff-no-rj"
+								alt="">
+						</div>
+						<div class="flex-1 pt-6 space-y-6">
+							<h3 class="font-heading text-4xl text-black uppercase font-bold">University of Galway</h3>
+							<div class="flex flex-wrap">
+								{{#times 3 }}
+								<div class="p-1 px-2 bg-gray-200 flex items-center space-x-1 mb-2 mr-2">
+									<div class="w-2 h-2 rounded-full bg-green"></div>
+									<div class="font-bold text-sm">Higher Diploma</div>
+								</div>
+								{{/times }}
+							</div>
+							<div class="text-lg font-semibold text-gray-900">Higher Diploma in Agricultural Science
+							</div>
+							<p class="text-gray-700 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+							<div class="text-lg font-semibold text-gray-900 underline">View Course
+							</div>
+						</div>
+					</a>
+					{{/times }}
+				</div>
+
+
+				<div class="flex justify-center items-center space-x-3">
+					<div
+						class="bg-black rounded-full w-10 h-10 flex justify-center items-center text-white text-xl font-bold">
+						1
+					</div>
+					<div
+						class="bg-black rounded-full w-10 h-10 flex justify-center items-center text-white text-xl font-bold">
+						2
+					</div>
+					<div
+						class="bg-black rounded-full w-10 h-10 flex justify-center items-center text-white text-xl font-bold">
+						3
+					</div>
+					<div
+						class="bg-black rounded-full w-10 h-10 flex justify-center items-center text-white text-xl font-bold">
+						4
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+</section>
+
+
+{{/content}}
+{{/extend}}

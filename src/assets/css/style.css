@@ -1,0 +1,96 @@
+@import '@glidejs/glide/dist/css/glide.core.min.css';
+
+@tailwind base;
+
+[x-cloak] {
+	display: none !important;
+}
+
+@layer components {
+	.container {
+		@apply mx-auto w-full max-w-7xl px-6;
+	}
+
+	.heading-line {
+		@apply relative z-50;
+	}
+
+	.heading-line::before {
+		@apply absolute -right-5 -top-2 z-[-2] h-12 w-[2000px] bg-green;
+		content: '';
+	}
+
+	.heading-line-center {
+		@apply relative;
+	}
+
+	.heading-line-center::before {
+		@apply absolute -top-4 right-1/2 z-[-2] h-14 w-[500px] translate-x-1/2 transform bg-green;
+		content: '';
+	}
+
+	.heading-line-blue {
+		@apply relative;
+	}
+
+	.heading-line-blue::before {
+		@apply absolute -right-10 -top-4 z-[-2] h-14 w-[2000px] bg-purple;
+		content: '';
+	}
+
+	.box-line {
+		@apply relative;
+	}
+
+	.box-line::before {
+		@apply absolute -z-10 h-full w-[2000px] scale-x-[103%] scale-y-[120%]  bg-purple sm:scale-y-[140%];
+		content: '';
+	}
+
+	.glide-carousel {
+		@apply -mx-6;
+	}
+
+	.glide-carousel {
+		width: calc(100% + 3rem) !important;
+	}
+
+	.duotone {
+		background-color: #c24949;
+		display: flex;
+		flex: 1 1 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.duotone img,
+	.duotone > div {
+		filter: grayscale(100%) contrast(1);
+		flex: 1 0 100%;
+		height: 100%;
+		max-width: 100%;
+		mix-blend-mode: multiply;
+		object-fit: cover;
+		opacity: 1;
+		position: relative;
+		width: 100%;
+	}
+
+	.duotone::before {
+		background-color: #1a1066;
+		bottom: 0;
+		content: '';
+		height: 100%;
+		left: 0;
+		mix-blend-mode: lighten;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+}
+
+@tailwind components;
+@tailwind utilities;

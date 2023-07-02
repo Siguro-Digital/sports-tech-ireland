@@ -1,0 +1,49 @@
+<header class="w-full z-50 {{#if hover }}absolute top-0 left-0 {{else}} relative {{/if}}">
+	<div class="container flex items-center justify-between py-4">
+		<a href="/">
+			<img src="/assets/img/logo.png" class="w-40">
+		</a>
+		<nav class="hidden md:block space-x-8 {{#if hover }} text-white {{else}} text-black {{/if}}">
+			<div class="relative group inline">
+				<a href="/about.html" class="text-[28px] font-bold py-3 uppercase font-heading">About</a>
+				<div
+					class="absolute hidden group-hover:flex top-6 left-[50%] space-y-4 translate-x-[-50%] bg-white py-4 flex-col w-40">
+					<a href="/contact.html"
+						class="text-xl font-bold uppercase font-heading text-center text-black">Contact Us</a>
+				</div>
+			</div>
+			<a href="/cluster.html" class="text-[28px] font-bold py-3 uppercase font-heading">Cluster</a>
+			<div class="relative group inline">
+				<a href="/network.html" class="text-[28px] font-bold uppercase font-heading">Network</a>
+				<div
+					class="absolute hidden group-hover:flex top-6 left-[50%] space-y-4 translate-x-[-50%] bg-white py-4 flex-col w-40">
+					<a href="/partner.html"
+						class="text-xl text-black font-bold uppercase font-heading text-center">Partner</a>
+					<a href="/membership.html"
+						class="text-xl text-black font-bold uppercase font-heading text-center">Member</a>
+				</div>
+			</div>
+			<div class="relative group inline">
+				<a href="/talent.html" class="text-[28px] font-bold uppercase font-heading">Talent</a>
+				<div
+					class="absolute hidden group-hover:flex top-6 left-[50%] space-y-4 translate-x-[-50%] bg-white py-4 flex-col w-40">
+					<a href="/digital-athlete.html"
+						class="text-xl text-black font-bold uppercase font-heading text-center">Digital Athele</a>
+					<a href="/course-finder.html"
+						class="text-xl text-black font-bold uppercase font-heading text-center">Course Finder</a>
+				</div>
+			</div>
+			<a href="/digital-athlete.html" class="text-[28px] font-bold uppercase font-heading">Sportstech Women</a>
+			<a href="/news.html" class="text-[28px] font-bold uppercase font-heading">Resources</a>
+		</nav>
+		<button class="md:hidden" @click="mobileMenu = !mobileMenu">
+			<svg class="h-6 {{#if hover }} text-white {{else}} text-black {{/if }}" viewBox="0 0 122 36" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<rect width="122" height="8" fill="currentColor" />
+				<rect y="14" width="111" height="8" fill="currentColor" />
+				<rect y="28" width="91" height="8" fill="currentColor" />
+			</svg>
+
+		</button>
+	</div>
+</header>

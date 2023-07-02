@@ -1,0 +1,29 @@
+<div
+	class="{{#if big }} col-span-1 lg:col-span-2 {{else}} col-span-1 {{/if}} relative h-96 rounded-md overflow-hidden {{ bg }}">
+	<div class="relative z-20 w-full h-full flex flex-col p-10 justify-between">
+		<div class="self-start w-2/3">
+			<h3 class="relative font-bold text-white uppercase text-4xl font-heading">{{ text }}</h3>
+		</div>
+		<div class="relative self-end">
+			{{> button text="Find out more" color="bg-white" border-color="border-white" }}
+		</div>
+	</div>
+
+	{{#if image }}
+	<div class="duotone w-full absolute h-full inset-0 z-10 object-cover">
+		<img class="w-full h-full" src="{{ image }}">
+	</div>
+	{{/if}}
+
+	{{#if big }}
+	{{else}}
+	<div class="absolute z-10 -top-1 right-8">
+		<svg class="2xl:40 xl:ml-60 lg:ml-56 md:ml-40 w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 150">
+			<rect x="10" y="5" width="15" height="150" fill="#FFFF" />
+			<rect x="38" y="5" width="15" height="150" fill="#FFFF" />
+			<rect x="65" y="5" width="20" height="150" fill="#FFFF" />
+		</svg>
+	</div>
+	{{/if}}
+
+</div>

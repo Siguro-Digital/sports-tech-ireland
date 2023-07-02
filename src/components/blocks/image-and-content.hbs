@@ -1,0 +1,30 @@
+<section class="py-20 {{ background }}">
+	<div class="container grid gridc-cols-1 md:grid-cols-2 gap-20">
+		<div>
+			<h2 class="font-bold inline text-black dark:text-white text-7xl font-heading uppercase heading-line">{{
+				heading }}
+			</h2>
+			<p class="text-lg text-gray-700 dark:text-white/70 py-8">{{ description }}</p>
+			{{#if button}}
+			{{> button
+			text="Find out more"
+			color="bg-green"
+			border-color="border-green"
+			}}
+			{{/if}}
+		</div>
+
+		<div class="space-y-6 flex flex-col items-center">
+			{{#if image_one }}
+			<div class="{{#if duotone }} duotone {{/if }}">
+				<img class="{{#if small_image }} w-full max-w-md {{else}} w-full relative aspect-video object-cover  {{/if}}"
+					src="{{ image_one }}">
+			</div>
+			{{/if}}
+			{{#if image_two }}
+			<img class="{{#if small_image }} w-full max-w-md {{else}} w-full relative aspect-video object-cover {{/if}}"
+				src="{{ image_two }}">
+			{{/if}}
+		</div>
+	</div>
+</section>

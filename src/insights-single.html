@@ -1,0 +1,32 @@
+{{#extend "default"}}
+{{#content "body"}}
+
+<section class="relative w-full py-20 sm:py-32 overflow-hidden bg-black">
+	<div class="container relative z-20">
+		<div class="flex flex-col w-full max-w-[1000px] space-y-8">
+			<h1
+				class="font-bold inline text-white text-6xl sm:text-[100px] font-heading uppercase heading-line leading-[90%]">
+				SPORTSTECH IRELAND LAUNCH: KITMA LABS</h1>
+			<p class="text-xl text-white w-full max-w-md line-clamp-2">At the official launch of Sports Tech Ireland we
+				were
+				delighted to welcome over a dozen...</p>
+			<ul
+				class="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 text-white text-lg">
+				<li>By Jane Doe</li>
+				<li class="bg-green w-4 h-4 rounded-full"></li>
+				<li>8 mins read</li>
+				<li class="bg-green w-4 h-4 rounded-full"></li>
+				<li>01 April 2023</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="absolute inset-0 z-0 w-full h-full {{#if duotone }} duotone {{else}} opacity-50 {{/if}}">
+		<img src="/assets/img/man.jpeg" class="w-full h-full object-cover" draggable="false" alt="">
+	</div>
+</section>
+
+{{> blocks/content }}
+
+{{/content}}
+{{/extend}}

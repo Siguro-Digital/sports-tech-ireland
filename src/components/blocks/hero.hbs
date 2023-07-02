@@ -1,0 +1,23 @@
+<section class="relative w-full py-20 md:py-48 overflow-hidden bg-black {{#if big }} md:pb-80 {{/if}}">
+	<div class="container flex flex-col relative space-y-24 md:space-y-12 z-30">
+		<div class="flex justify-start">
+			<h1
+				class="font-bold inline text-white text-7xl sm:text-[100px] font-heading uppercase {{ line }} leading-[90%]">
+				{{
+				heading }}</h1>
+		</div>
+		{{#if subheading }}
+		<div class="flex justify-end">
+			<div
+				class="inline {{#if box-line }} box-line {{/if}} uppercase text-4xl sm:text-[40px] leading-[108%] text-white font-bold font-heading w-full max-w-[80%] md:max-w-[800px]">
+				{{subheading }}</div>
+		</div>
+		{{/if}}
+	</div>
+
+	<div class="absolute w-1/2 h-full z-20 top-0 left-0 bg-gradient-to-r from-black to-transparent opacity-50"></div>
+
+	<div class="absolute inset-0 z-0 w-full h-full {{#if duotone }} duotone {{else}} opacity-50 {{/if}}">
+		<img src="{{ image }}" class="w-full h-full object-cover" draggable="false" alt="">
+	</div>
+</section>
