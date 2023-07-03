@@ -16,7 +16,7 @@
 	}
 
 	.heading-line::before {
-		@apply absolute -right-5 -top-2 z-[-2] h-12 w-[2000px] bg-green;
+		@apply absolute -top-2 left-[50%] right-0 z-[-2] h-12 w-[120%] translate-x-[-50%] bg-green md:-right-5 md:left-auto md:w-[2000px] md:translate-x-0;
 		content: '';
 	}
 
