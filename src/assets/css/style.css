@@ -29,15 +29,6 @@
 		content: '';
 	}
 
-	.heading-line-blue {
-		@apply relative;
-	}
-
-	.heading-line-blue::before {
-		@apply absolute -right-10 -top-4 z-[-2] h-14 w-[2000px] bg-purple;
-		content: '';
-	}
-
 	.box-line {
 		@apply relative;
 	}
