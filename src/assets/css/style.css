@@ -12,11 +12,11 @@
 	}
 
 	.heading-line {
-		@apply relative z-50;
+		@apply relative z-50 inline min-w-[400px];
 	}
 
 	.heading-line::before {
-		@apply absolute -top-2 left-[50%] right-0 z-[-2] h-12 w-[120%] translate-x-[-50%] bg-green md:-right-5 md:left-auto md:w-[2000px] md:translate-x-0;
+		@apply absolute -top-2 left-[50%] right-0 z-[-2] h-12 w-[120%] translate-x-[-50%] bg-green md:right-0 md:left-auto md:w-[2000px] md:translate-x-0;
 		content: '';
 	}
 
