@@ -1,7 +1,11 @@
-<header class="w-full z-50 {{#if hover }}absolute top-0 left-0 {{else}} relative {{/if}}">
+<header class="w-full z-50 {{#if hover }} absolute top-0 left-0 {{else}} relative {{/if}}">
 	<div class="container flex items-center justify-between py-4">
 		<a href="/">
+		 {{#if hover }}
+			<img src="/assets/img/logo-white.svg" class="w-40">
+		{{else}}
 			<img src="/assets/img/logo.png" class="w-40">
+		{{/if}}
 		</a>
 		<nav class="hidden md:block space-x-8 {{#if hover }} text-white {{else}} text-black {{/if}}">
 			<div class="relative group inline">
